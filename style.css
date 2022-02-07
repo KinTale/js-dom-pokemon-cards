@@ -1,10 +1,14 @@
 * {
   box-sizing: border-box;
+
 }
 
 html,
 body {
   margin: 0;
+}
+ul li{
+  list-style-type: none;
 }
 
 body {
@@ -17,7 +21,8 @@ body {
 }
 
 img {
-  max-width: 100%;
+  max-width: 90%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
 h1,
@@ -34,6 +39,7 @@ h2 {
 
   padding: 2rem 0;
   margin-bottom: 2rem;
+  text-decoration: none;
 }
 
 .card {
@@ -45,6 +51,7 @@ h2 {
 
   cursor: pointer;
   transition: all 300ms;
+  
 }
 
 .card:hover {
@@ -54,9 +61,10 @@ h2 {
 
 .card--text {
   margin: 0.2rem;
-  padding: 1rem;
-
+  padding: 2.2rem;
   border-radius: 5px;
+  line-height: 2rem
+
 }
 
 .card--img {
@@ -64,4 +72,11 @@ h2 {
   margin: 0 auto;
 
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.imgBox {
+  width: 20rem;
+  display: flex;
+  justify-content: right;
+  
 }
