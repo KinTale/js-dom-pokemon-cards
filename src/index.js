@@ -42,7 +42,7 @@ function makePokemonCard(name) {
         const SPEED_STAT = pokemon.stats[5].base_stat
 
         if (pokemon.name === name) {
-            h2.innerText = pokemon.name
+            h2.innerText = pokemon.name.toUpperCase()
             img.setAttribute('src', OFFICIAL_ARTWORK)
             hp.innerText = `${HP}:\u00A0 ${HP_STAT}`
             attack.innerText = `${ATTACK}:\u00A0 ${ATTACK_STAT}`
