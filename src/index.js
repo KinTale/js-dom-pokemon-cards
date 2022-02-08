@@ -1,11 +1,4 @@
 
-console.log(data);
-
-//You can start simple and just render a single 
-//pokemon card from the first element
-console.log(data[0]);
-
-
 function makePokemonCard(name) {
     //POKEMON NAME
     const h2 = document.createElement('h2')
@@ -28,9 +21,9 @@ function makePokemonCard(name) {
     const speed = document.createElement('li')
     const cards = document.querySelector('.cards')
     // GAME APPEARANCE
-    const game = document.createElement('ul')
-    const gameTitles = document.createElement('li')
-
+    const game = document.createElement('div')
+    game.setAttribute('class', 'game-holder')
+    const gameTitles = document.createElement('p')
 
     for (pokemon of data) {
         const OFFICIAL_ARTWORK = pokemon.sprites.other['official-artwork'].front_default
@@ -48,8 +41,6 @@ function makePokemonCard(name) {
         const SPECIAL_DEFENCE_STAT = pokemon.stats[4].base_stat
         const SPEED_STAT = pokemon.stats[5].base_stat
 
-      
-
         if (pokemon.name === name) {
             h2.innerText = pokemon.name
             img.setAttribute('src', OFFICIAL_ARTWORK)
@@ -59,19 +50,10 @@ function makePokemonCard(name) {
             specialAttack.innerText = `${SPECIAL_ATTACK}:\u00A0 ${SPECIAL_ATTACK_STAT}`
             specialDefence.innerText = `${SPECIAL_DEFENCE}:\u00A0 ${SPECIAL_DEFENCE_STAT}`
             speed.innerText = `${SPEED}:\u00A0 ${SPEED_STAT}`
-
-
-
-
-
-
-
-
+            game.innerText = 'GAME APPEARANCE:'
+            gameTitles.innerText = pokemon.game_indices[data.indexOf(pokemon)].version.name.toUpperCase()
 
         }
-
-
-
 
         cardli.append(h2)
         imgBox.append(img)
@@ -85,12 +67,11 @@ function makePokemonCard(name) {
         cardli.append(cardText)
         cards.append(cardli)
         cards.append(game)
+        cardli.append(game)
         game.append(gameTitles)
     }
-
 }
 
 for (pokemon of data) {
     console.log(makePokemonCard(pokemon.name))
-    console.log()
 }
