@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-
 }
 
 html,
@@ -8,9 +7,8 @@ body {
   margin: 0;
 }
 
-ul li{
+ul li {
   list-style-type: none;
-
 }
 
 body {
@@ -21,13 +19,12 @@ body {
   height: 100vh;
   font-family: sans-serif;
 }
-.game-holder, .game-holder p
-{
+.game-holder,
+.game-holder p {
   display: grid;
   justify-content: center;
   font-weight: bolder;
 }
-
 
 img {
   max-width: 90%;
@@ -71,7 +68,7 @@ h2 {
   padding: 2.2rem;
   border-radius: 5px;
   line-height: 2rem;
-  display:inline-block
+  display: inline-block;
 }
 
 .card--img {
@@ -85,5 +82,4 @@ h2 {
   width: 20rem;
   display: flex;
   justify-content: right;
-  
 }
